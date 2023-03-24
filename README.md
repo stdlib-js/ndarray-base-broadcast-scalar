@@ -22,7 +22,7 @@ limitations under the License.
 
 [![NPM version][npm-image]][npm-url] [![Build Status][test-image]][test-url] [![Coverage Status][coverage-image]][coverage-url] <!-- [![dependencies][dependencies-image]][dependencies-url] -->
 
-> Broadcast a scalar value to an [`ndarray`][@stdlib/ndarray/base/ctor] to a specified shape.
+> Broadcast a scalar value to an [`ndarray`][@stdlib/ndarray/base/ctor] having a specified shape.
 
 <!-- Section to include introductory text. Make sure to keep an empty line after the intro `section` element and another before the `/section` close. -->
 
@@ -34,43 +34,35 @@ limitations under the License.
 
 <!-- Package usage documentation. -->
 
+<section class="installation">
 
+## Installation
+
+```bash
+npm install @stdlib/ndarray-base-broadcast-scalar
+```
+
+Alternatively,
+
+-   To load the package in a website via a `script` tag without installation and bundlers, use the [ES Module][es-module] available on the [`esm` branch][esm-url].
+-   If you are using Deno, visit the [`deno` branch][deno-url].
+-   For use in Observable, or in browser/node environments, use the [Universal Module Definition (UMD)][umd] build available on the [`umd` branch][umd-url].
+
+The [branches.md][branches-url] file summarizes the available branches and displays a diagram illustrating their relationships.
+
+</section>
 
 <section class="usage">
 
 ## Usage
 
-To use in Observable,
-
 ```javascript
-broadcastScalar = require( 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-base-broadcast-scalar@umd/browser.js' )
-```
-
-To vendor stdlib functionality and avoid installing dependency trees for Node.js, you can use the UMD server build:
-
-```javascript
-var broadcastScalar = require( 'path/to/vendor/umd/ndarray-base-broadcast-scalar/index.js' )
-```
-
-To include the bundle in a webpage,
-
-```html
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-base-broadcast-scalar@umd/browser.js"></script>
-```
-
-If no recognized module system is present, access bundle contents via the global scope:
-
-```html
-<script type="text/javascript">
-(function () {
-    window.broadcastScalar;
-})();
-</script>
+var broadcastScalar = require( '@stdlib/ndarray-base-broadcast-scalar' );
 ```
 
 #### broadcastScalar( value, dtype, shape, order )
 
-Broadcast a scalar value to an [`ndarray`][@stdlib/ndarray/base/ctor] to a specified shape and [data type][@stdlib/ndarray/dtypes].
+Broadcast a scalar value to an [`ndarray`][@stdlib/ndarray/base/ctor] having a specified shape and [data type][@stdlib/ndarray/dtypes].
 
 ```javascript
 var x = broadcastScalar( 1.0, 'float64', [ 2, 2 ], 'row-major' );
@@ -110,14 +102,9 @@ var v = x.get( 0, 0 );
 
 <!-- eslint no-undef: "error" -->
 
-```html
-<!DOCTYPE html>
-<html lang="en">
-<body>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-dtypes@umd/browser.js"></script>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-base-broadcast-scalar@umd/browser.js"></script>
-<script type="text/javascript">
-(function () {
+```javascript
+var dtypes = require( '@stdlib/ndarray-dtypes' );
+var broadcastScalar = require( '@stdlib/ndarray-base-broadcast-scalar' );
 
 // Get a list of data types:
 var dt = dtypes();
@@ -129,11 +116,6 @@ for ( i = 0; i < dt.length; i++ ) {
     x = broadcastScalar( i, dt[ i ], [ 2, 2 ], 'row-major' );
     console.log( x.get( 0, 1 ) );
 }
-
-})();
-</script>
-</body>
-</html>
 ```
 
 </section>
@@ -225,9 +207,9 @@ Copyright &copy; 2016-2023. The Stdlib [Authors][stdlib-authors].
 
 [stdlib-license]: https://raw.githubusercontent.com/stdlib-js/ndarray-base-broadcast-scalar/main/LICENSE
 
-[@stdlib/ndarray/base/ctor]: https://github.com/stdlib-js/stdlib/tree/umd
+[@stdlib/ndarray/base/ctor]: https://github.com/stdlib-js/stdlib
 
-[@stdlib/ndarray/dtypes]: https://github.com/stdlib-js/stdlib/tree/umd
+[@stdlib/ndarray/dtypes]: https://github.com/stdlib-js/stdlib
 
 </section>
 
