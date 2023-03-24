@@ -22,7 +22,7 @@ limitations under the License.
 
 [![NPM version][npm-image]][npm-url] [![Build Status][test-image]][test-url] [![Coverage Status][coverage-image]][coverage-url] <!-- [![dependencies][dependencies-image]][dependencies-url] -->
 
-> Broadcast a scalar value to an [`ndarray`][@stdlib/ndarray/base/ctor] to a specified shape.
+> Broadcast a scalar value to an [`ndarray`][@stdlib/ndarray/base/ctor] having a specified shape.
 
 <!-- Section to include introductory text. Make sure to keep an empty line after the intro `section` element and another before the `/section` close. -->
 
@@ -62,7 +62,7 @@ var broadcastScalar = require( '@stdlib/ndarray-base-broadcast-scalar' );
 
 #### broadcastScalar( value, dtype, shape, order )
 
-Broadcast a scalar value to an [`ndarray`][@stdlib/ndarray/base/ctor] to a specified shape and [data type][@stdlib/ndarray/dtypes].
+Broadcast a scalar value to an [`ndarray`][@stdlib/ndarray/base/ctor] having a specified shape and [data type][@stdlib/ndarray/dtypes].
 
 ```javascript
 var x = broadcastScalar( 1.0, 'float64', [ 2, 2 ], 'row-major' );
