@@ -34,19 +34,30 @@ limitations under the License.
 
 <!-- Package usage documentation. -->
 
+<section class="installation">
 
+## Installation
+
+```bash
+npm install @stdlib/ndarray-base-broadcast-scalar
+```
+
+Alternatively,
+
+-   To load the package in a website via a `script` tag without installation and bundlers, use the [ES Module][es-module] available on the [`esm` branch][esm-url].
+-   If you are using Deno, visit the [`deno` branch][deno-url].
+-   For use in Observable, or in browser/node environments, use the [Universal Module Definition (UMD)][umd] build available on the [`umd` branch][umd-url].
+
+The [branches.md][branches-url] file summarizes the available branches and displays a diagram illustrating their relationships.
+
+</section>
 
 <section class="usage">
 
 ## Usage
 
 ```javascript
-import broadcastScalar from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-base-broadcast-scalar@esm/index.mjs';
-```
-The previous example will load the latest bundled code from the esm branch. Alternatively, you may load a specific version by loading the file from one of the [tagged bundles](https://github.com/stdlib-js/ndarray-base-broadcast-scalar/tags). For example,
-
-```javascript
-import broadcastScalar from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-base-broadcast-scalar@v0.0.0-esm/index.mjs';
+var broadcastScalar = require( '@stdlib/ndarray-base-broadcast-scalar' );
 ```
 
 #### broadcastScalar( value, dtype, shape, order )
@@ -78,6 +89,8 @@ var v = x.get( 0, 0 );
 ## Notes
 
 -   If `value` is a number and [`dtype`][@stdlib/ndarray/dtypes] is a complex [data type][@stdlib/ndarray/dtypes], the function returns an [`ndarray`][@stdlib/ndarray/base/ctor] containing a complex number whose real component equals the provided scalar `value` and whose imaginary component is zero.
+-   The returned [ndarray][@stdlib/ndarray/base/ctor] is a view on an [ndarray][@stdlib/ndarray/base/ctor] data buffer containing a single element. The view is **not** contiguous. As more than one element of a returned view may refer to the same memory location, writing to the view may affect multiple elements. If you need to write to the returned [ndarray][@stdlib/ndarray/base/ctor], copy the [ndarray][@stdlib/ndarray/base/ctor] **before** performing operations which may mutate elements.
+-   The returned [ndarray][@stdlib/ndarray/base/ctor] is a "base" [ndarray][@stdlib/ndarray/base/ctor], and, thus, the returned [ndarray][@stdlib/ndarray/base/ctor] does not perform bounds checking or afford any of the guarantees of the non-base [ndarray][@stdlib/ndarray/ctor] constructor. The primary intent of this function is to broadcast a scalar value as an [`ndarray`][@stdlib/ndarray/base/ctor] within internal implementations and to do so with minimal overhead.
 
 </section>
 
@@ -91,14 +104,9 @@ var v = x.get( 0, 0 );
 
 <!-- eslint no-undef: "error" -->
 
-```html
-<!DOCTYPE html>
-<html lang="en">
-<body>
-<script type="module">
-
-import dtypes from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-dtypes@esm/index.mjs';
-import broadcastScalar from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-base-broadcast-scalar@esm/index.mjs';
+```javascript
+var dtypes = require( '@stdlib/ndarray-dtypes' );
+var broadcastScalar = require( '@stdlib/ndarray-base-broadcast-scalar' );
 
 // Get a list of data types:
 var dt = dtypes();
@@ -110,10 +118,6 @@ for ( i = 0; i < dt.length; i++ ) {
     x = broadcastScalar( i, dt[ i ], [ 2, 2 ], 'row-major' );
     console.log( x.get( 0, 1 ) );
 }
-
-</script>
-</body>
-</html>
 ```
 
 </section>
@@ -145,7 +149,7 @@ for ( i = 0; i < dt.length; i++ ) {
 
 ## Notice
 
-This package is part of [stdlib][stdlib], a standard library with an emphasis on numerical and scientific computing. The library provides a collection of robust, high performance libraries for mathematics, statistics, streams, utilities, and more.
+This package is part of [stdlib][stdlib], a standard library for JavaScript and Node.js, with an emphasis on numerical and scientific computing. The library provides a collection of robust, high performance libraries for mathematics, statistics, streams, utilities, and more.
 
 For more information on the project, filing bug reports and feature requests, and guidance on how to develop [stdlib][stdlib], see the main project [repository][stdlib].
 
@@ -205,9 +209,11 @@ Copyright &copy; 2016-2023. The Stdlib [Authors][stdlib-authors].
 
 [stdlib-license]: https://raw.githubusercontent.com/stdlib-js/ndarray-base-broadcast-scalar/main/LICENSE
 
-[@stdlib/ndarray/base/ctor]: https://github.com/stdlib-js/stdlib/tree/esm
+[@stdlib/ndarray/base/ctor]: https://github.com/stdlib-js/stdlib
 
-[@stdlib/ndarray/dtypes]: https://github.com/stdlib-js/stdlib/tree/esm
+[@stdlib/ndarray/ctor]: https://github.com/stdlib-js/stdlib
+
+[@stdlib/ndarray/dtypes]: https://github.com/stdlib-js/stdlib
 
 </section>
 
