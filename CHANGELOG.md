@@ -4,7 +4,7 @@
 
 <section class="release" id="unreleased">
 
-## Unreleased (2025-08-11)
+## Unreleased (2025-09-18)
 
 <section class="bug-fixes">
 
@@ -22,6 +22,8 @@
 
 <details>
 
+-   [`1285c82`](https://github.com/stdlib-js/stdlib/commit/1285c82a9767afae6ddf57df797eeff5ed1e49f3) - **docs:** update examples _(by Athan Reines)_
+-   [`3acf6f6`](https://github.com/stdlib-js/stdlib/commit/3acf6f69dd646f330a80cb299737133c06ca0dc8) - **test:** use functional APIs for accessing ndarray properties _(by Athan Reines)_
 -   [`9db35a0`](https://github.com/stdlib-js/stdlib/commit/9db35a046ad390bb8d781c43641dc1b01fe20cbf) - **refactor:** use assertion utility _(by Athan Reines)_
 -   [`043dc69`](https://github.com/stdlib-js/stdlib/commit/043dc69c76ea6780cbba2c223417fccda4685c7a) - **fix:** handle 0d edge case _(by Athan Reines)_
 -   [`bc026be`](https://github.com/stdlib-js/stdlib/commit/bc026be819b804711432f11bbdbc369271a27a9b) - **refactor:** use assertion utility _(by Athan Reines)_
