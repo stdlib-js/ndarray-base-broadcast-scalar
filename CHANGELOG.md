@@ -4,7 +4,7 @@
 
 <section class="release" id="unreleased">
 
-## Unreleased (2025-09-18)
+## Unreleased (2025-12-08)
 
 <section class="bug-fixes">
 
@@ -22,6 +22,7 @@
 
 <details>
 
+-   [`2772189`](https://github.com/stdlib-js/stdlib/commit/2772189443aedf358ee73b3232feadd2a0acc581) - **docs:** improve doctests for complex number instances in `ndarray/base/broadcast-scalar` [(#8869)](https://github.com/stdlib-js/stdlib/pull/8869) _(by ashutoshsao, Athan Reines)_
 -   [`1285c82`](https://github.com/stdlib-js/stdlib/commit/1285c82a9767afae6ddf57df797eeff5ed1e49f3) - **docs:** update examples _(by Athan Reines)_
 -   [`3acf6f6`](https://github.com/stdlib-js/stdlib/commit/3acf6f69dd646f330a80cb299737133c06ca0dc8) - **test:** use functional APIs for accessing ndarray properties _(by Athan Reines)_
 -   [`9db35a0`](https://github.com/stdlib-js/stdlib/commit/9db35a046ad390bb8d781c43641dc1b01fe20cbf) - **refactor:** use assertion utility _(by Athan Reines)_
@@ -39,10 +40,11 @@
 
 ### Contributors
 
-A total of 2 people contributed to this release. Thank you to the following contributors:
+A total of 3 people contributed to this release. Thank you to the following contributors:
 
 -   Athan Reines
 -   Philipp Burckhardt
+-   ashutoshsao
 
 </section>
 
