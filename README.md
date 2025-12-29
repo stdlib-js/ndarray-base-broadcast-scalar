@@ -33,7 +33,7 @@ limitations under the License.
 
 [![NPM version][npm-image]][npm-url] [![Build Status][test-image]][test-url] [![Coverage Status][coverage-image]][coverage-url] <!-- [![dependencies][dependencies-image]][dependencies-url] -->
 
-> Broadcast a scalar value to an [`ndarray`][@stdlib/ndarray/base/ctor] having a specified shape.
+> Broadcast a scalar value to an [ndarray][@stdlib/ndarray/base/ctor] having a specified shape.
 
 <!-- Section to include introductory text. Make sure to keep an empty line after the intro `section` element and another before the `/section` close. -->
 
@@ -45,43 +45,37 @@ limitations under the License.
 
 <!-- Package usage documentation. -->
 
+<section class="installation">
 
+## Installation
+
+```bash
+npm install @stdlib/ndarray-base-broadcast-scalar
+```
+
+Alternatively,
+
+-   To load the package in a website via a `script` tag without installation and bundlers, use the [ES Module][es-module] available on the [`esm`][esm-url] branch (see [README][esm-readme]).
+-   If you are using Deno, visit the [`deno`][deno-url] branch (see [README][deno-readme] for usage intructions).
+-   For use in Observable, or in browser/node environments, use the [Universal Module Definition (UMD)][umd] build available on the [`umd`][umd-url] branch (see [README][umd-readme]).
+
+The [branches.md][branches-url] file summarizes the available branches and displays a diagram illustrating their relationships.
+
+To view installation and usage instructions specific to each branch build, be sure to explicitly navigate to the respective README files on each branch, as linked to above.
+
+</section>
 
 <section class="usage">
 
 ## Usage
 
-To use in Observable,
-
 ```javascript
-broadcastScalar = require( 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-base-broadcast-scalar@umd/browser.js' )
-```
-
-To vendor stdlib functionality and avoid installing dependency trees for Node.js, you can use the UMD server build:
-
-```javascript
-var broadcastScalar = require( 'path/to/vendor/umd/ndarray-base-broadcast-scalar/index.js' )
-```
-
-To include the bundle in a webpage,
-
-```html
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-base-broadcast-scalar@umd/browser.js"></script>
-```
-
-If no recognized module system is present, access bundle contents via the global scope:
-
-```html
-<script type="text/javascript">
-(function () {
-    window.broadcastScalar;
-})();
-</script>
+var broadcastScalar = require( '@stdlib/ndarray-base-broadcast-scalar' );
 ```
 
 #### broadcastScalar( value, dtype, shape, order )
 
-Broadcasts a scalar value to an [`ndarray`][@stdlib/ndarray/base/ctor] having a specified shape and [data type][@stdlib/ndarray/dtypes].
+Broadcasts a scalar value to an [ndarray][@stdlib/ndarray/base/ctor] having a specified shape and [data type][@stdlib/ndarray/dtypes].
 
 ```javascript
 var getShape = require( '@stdlib/ndarray-shape' );
@@ -110,9 +104,9 @@ var v = x.get( 0, 0 );
 
 ## Notes
 
--   If `value` is a number and [`dtype`][@stdlib/ndarray/dtypes] is a complex [data type][@stdlib/ndarray/dtypes], the function returns an [`ndarray`][@stdlib/ndarray/base/ctor] containing a complex number whose real component equals the provided scalar `value` and whose imaginary component is zero.
+-   If `value` is a number and [`dtype`][@stdlib/ndarray/dtypes] is a complex [data type][@stdlib/ndarray/dtypes], the function returns an [ndarray][@stdlib/ndarray/base/ctor] containing a complex number whose real component equals the provided scalar `value` and whose imaginary component is zero.
 -   The returned [ndarray][@stdlib/ndarray/base/ctor] is a view on an [ndarray][@stdlib/ndarray/base/ctor] data buffer containing a single element. The view is **not** contiguous. As more than one element of a returned view may refer to the same memory location, writing to the view may affect multiple elements. If you need to write to the returned [ndarray][@stdlib/ndarray/base/ctor], copy the [ndarray][@stdlib/ndarray/base/ctor] **before** performing operations which may mutate elements.
--   The returned [ndarray][@stdlib/ndarray/base/ctor] is a "base" [ndarray][@stdlib/ndarray/base/ctor], and, thus, the returned [ndarray][@stdlib/ndarray/base/ctor] does not perform bounds checking or afford any of the guarantees of the non-base [ndarray][@stdlib/ndarray/ctor] constructor. The primary intent of this function is to broadcast a scalar value as an [`ndarray`][@stdlib/ndarray/base/ctor] within internal implementations and to do so with minimal overhead.
+-   The returned [ndarray][@stdlib/ndarray/base/ctor] is a "base" [ndarray][@stdlib/ndarray/base/ctor], and, thus, the returned [ndarray][@stdlib/ndarray/base/ctor] does not perform bounds checking or afford any of the guarantees of the non-base [ndarray][@stdlib/ndarray/ctor] constructor. The primary intent of this function is to broadcast a scalar value as an [ndarray][@stdlib/ndarray/base/ctor] within internal implementations and to do so with minimal overhead.
 
 </section>
 
@@ -126,14 +120,9 @@ var v = x.get( 0, 0 );
 
 <!-- eslint no-undef: "error" -->
 
-```html
-<!DOCTYPE html>
-<html lang="en">
-<body>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-dtypes@umd/browser.js"></script>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-base-broadcast-scalar@umd/browser.js"></script>
-<script type="text/javascript">
-(function () {
+```javascript
+var dtypes = require( '@stdlib/ndarray-dtypes' );
+var broadcastScalar = require( '@stdlib/ndarray-base-broadcast-scalar' );
 
 // Get a list of data types:
 var dt = dtypes( 'integer_and_generic' );
@@ -145,11 +134,6 @@ for ( i = 0; i < dt.length; i++ ) {
     x = broadcastScalar( i, dt[ i ], [ 2, 2 ], 'row-major' );
     console.log( x.get( 0, 1 ) );
 }
-
-})();
-</script>
-</body>
-</html>
 ```
 
 </section>
@@ -224,8 +208,8 @@ Copyright &copy; 2016-2025. The Stdlib [Authors][stdlib-authors].
 
 -->
 
-[chat-image]: https://img.shields.io/gitter/room/stdlib-js/stdlib.svg
-[chat-url]: https://app.gitter.im/#/room/#stdlib-js_stdlib:gitter.im
+[chat-image]: https://img.shields.io/badge/zulip-join_chat-brightgreen.svg
+[chat-url]: https://stdlib.zulipchat.com
 
 [stdlib]: https://github.com/stdlib-js/stdlib
 
@@ -244,11 +228,11 @@ Copyright &copy; 2016-2025. The Stdlib [Authors][stdlib-authors].
 
 [stdlib-license]: https://raw.githubusercontent.com/stdlib-js/ndarray-base-broadcast-scalar/main/LICENSE
 
-[@stdlib/ndarray/base/ctor]: https://github.com/stdlib-js/ndarray-base-ctor/tree/umd
+[@stdlib/ndarray/base/ctor]: https://github.com/stdlib-js/ndarray-base-ctor
 
-[@stdlib/ndarray/ctor]: https://github.com/stdlib-js/ndarray-ctor/tree/umd
+[@stdlib/ndarray/ctor]: https://github.com/stdlib-js/ndarray-ctor
 
-[@stdlib/ndarray/dtypes]: https://github.com/stdlib-js/ndarray-dtypes/tree/umd
+[@stdlib/ndarray/dtypes]: https://github.com/stdlib-js/ndarray-dtypes
 
 </section>
 
