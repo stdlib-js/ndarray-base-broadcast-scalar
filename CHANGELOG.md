@@ -4,12 +4,13 @@
 
 <section class="release" id="unreleased">
 
-## Unreleased (2025-12-29)
+## Unreleased (2026-01-26)
 
 <section class="bug-fixes">
 
 ### Bug Fixes
 
+-   [`11cc2cf`](https://github.com/stdlib-js/stdlib/commit/11cc2cf8869a4b6ebf48545d5678eda25513529e) - use ndarray assertion utility
 -   [`043dc69`](https://github.com/stdlib-js/stdlib/commit/043dc69c76ea6780cbba2c223417fccda4685c7a) - handle 0d edge case
 
 </section>
@@ -22,6 +23,7 @@
 
 <details>
 
+-   [`11cc2cf`](https://github.com/stdlib-js/stdlib/commit/11cc2cf8869a4b6ebf48545d5678eda25513529e) - **fix:** use ndarray assertion utility _(by Athan Reines)_
 -   [`a52bc78`](https://github.com/stdlib-js/stdlib/commit/a52bc786e790aa242a563cdaefb58107b6cd2d9b) - **refactor:** normalize a provided data type to a string _(by Athan Reines)_
 -   [`2772189`](https://github.com/stdlib-js/stdlib/commit/2772189443aedf358ee73b3232feadd2a0acc581) - **docs:** improve doctests for complex number instances in `ndarray/base/broadcast-scalar` [(#8869)](https://github.com/stdlib-js/stdlib/pull/8869) _(by ashutoshsao, Athan Reines)_
 -   [`1285c82`](https://github.com/stdlib-js/stdlib/commit/1285c82a9767afae6ddf57df797eeff5ed1e49f3) - **docs:** update examples _(by Athan Reines)_
