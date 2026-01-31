@@ -52,6 +52,11 @@ limitations under the License.
 ## Usage
 
 ```javascript
+import broadcastScalar from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-base-broadcast-scalar@deno/mod.js';
+```
+The previous example will load the latest bundled code from the deno branch. Alternatively, you may load a specific version by loading the file from one of the [tagged bundles](https://github.com/stdlib-js/ndarray-base-broadcast-scalar/tags). For example,
+
+```javascript
 import broadcastScalar from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-base-broadcast-scalar@v0.2.3-deno/mod.js';
 ```
 
@@ -104,7 +109,7 @@ var v = x.get( 0, 0 );
 
 ```javascript
 import dtypes from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-dtypes@deno/mod.js';
-import broadcastScalar from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-base-broadcast-scalar@v0.2.3-deno/mod.js';
+import broadcastScalar from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-base-broadcast-scalar@deno/mod.js';
 
 // Get a list of data types:
 var dt = dtypes( 'integer_and_generic' );
