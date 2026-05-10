@@ -2,6 +2,41 @@
 
 > Package changelog.
 
+<section class="release" id="unreleased">
+
+## Unreleased (2026-05-10)
+
+<section class="commits">
+
+### Commits
+
+<details>
+
+-   [`e64ea31`](https://github.com/stdlib-js/stdlib/commit/e64ea3136aa617d66672f768f280a2023db457fc) - **docs:** improve doctests for complex number typed arrays in `ndarray/base/broadcast-scalar` [(#12048)](https://github.com/stdlib-js/stdlib/pull/12048) _(by Karan Anand, Athan Reines)_
+
+</details>
+
+</section>
+
+<!-- /.commits -->
+
+<section class="contributors">
+
+### Contributors
+
+A total of 2 people contributed to this release. Thank you to the following contributors:
+
+-   Athan Reines
+-   Karan Anand
+
+</section>
+
+<!-- /.contributors -->
+
+</section>
+
+<!-- /.release -->
+
 <section class="release" id="v0.2.4">
 
 ## 0.2.4 (2026-02-08)
