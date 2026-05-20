@@ -4,7 +4,7 @@
 
 <section class="release" id="unreleased">
 
-## Unreleased (2026-05-10)
+## Unreleased (2026-05-20)
 
 <section class="commits">
 
@@ -12,6 +12,7 @@
 
 <details>
 
+-   [`ad8f9b5`](https://github.com/stdlib-js/stdlib/commit/ad8f9b59d9838fadeac1c3a7d53a5c6cfcf11365) - **bench:** refactor to use string interpolation in `ndarray/base` [(#11431)](https://github.com/stdlib-js/stdlib/pull/11431) _(by Karan Anand)_
 -   [`e64ea31`](https://github.com/stdlib-js/stdlib/commit/e64ea3136aa617d66672f768f280a2023db457fc) - **docs:** improve doctests for complex number typed arrays in `ndarray/base/broadcast-scalar` [(#12048)](https://github.com/stdlib-js/stdlib/pull/12048) _(by Karan Anand, Athan Reines)_
 
 </details>
